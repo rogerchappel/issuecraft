@@ -1,0 +1,27 @@
+{
+  "name": "issuecraft",
+  "version": 1,
+  "defaultMode": "offline-draft",
+  "externalMutationDefault": false,
+  "commands": [
+    {
+      "name": "draft",
+      "intent": "Turn a local log file into a Markdown issue draft",
+      "writes": ["issues/*.md"],
+      "externalEffects": []
+    },
+    {
+      "name": "scan-todos",
+      "intent": "Turn local TODO-style markers into Markdown issue drafts",
+      "writes": ["issues/*.md"],
+      "externalEffects": []
+    },
+    {
+      "name": "gh-preview",
+      "intent": "Print a reviewed GitHub CLI command preview",
+      "writes": [],
+      "externalEffects": []
+    }
+  ],
+  "requiredReview": ["generated markdown", "redaction quality", "gh preview before copy/paste"]
+}
