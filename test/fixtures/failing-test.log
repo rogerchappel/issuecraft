@@ -1,0 +1,6 @@
+TAP version 13
+ok 1 parses config
+not ok 2 renders draft
+  AssertionError: expected title to include failure
+  at tests/render.test.ts:42:3
+# token=ghp_1234567890abcdefghijklmnop should not leak
