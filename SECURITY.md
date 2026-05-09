@@ -1,58 +1,22 @@
 # Security Policy
 
-## Supported Versions
+IssueCraft handles local evidence that may contain sensitive project details. Please treat generated drafts as private until reviewed.
 
-Replace this section with the supported versions for `issuecraft`.
+## Supported versions
 
-Example:
+Security fixes target the latest `main` branch until versioned releases begin.
 
-```md
-| Version | Supported |
-| --- | --- |
-| .x | Yes |
-| < .0 | No |
-```
+## Reporting a vulnerability
 
-If the project does not publish versioned releases yet, say that clearly.
+Open a private security advisory on GitHub if available, or contact the maintainer without including live secrets in the report. Include reproduction steps, affected commands, and the smallest safe sample input.
 
-## Reporting a Vulnerability
+## Data handling expectations
 
-Please do not report suspected vulnerabilities in public issues, pull requests, or discussions.
+- IssueCraft does not send data over the network.
+- Draft generation only reads paths passed on the command line.
+- Redaction is best-effort and covered by fixtures, but humans must still review drafts before sharing.
+- `gh-preview` must remain a preview; automatic posting requires a separate, explicit design review.
 
-Ask maintainers for the private security reporting path before sharing details.
+## Secret examples to avoid
 
-If no private reporting path exists yet, ask maintainers through public project channels for a private reporting path. Do not include exploit details, secrets, personal data, or sensitive technical details in public messages.
-
-## What to Include
-
-When a private reporting path is available, include:
-
-- A clear description of the issue.
-- Affected versions, files, packages, workflows, or configuration.
-- Steps to reproduce, proof of concept, or attack scenario when safe to share.
-- Potential impact.
-- Suggested mitigation, if known.
-
-## Response Expectations
-
-Maintainers review good-faith reports as capacity allows.
-
-Do not imply paid support, guaranteed response times, guaranteed fixes, or service-level agreements unless `issuecraft` explicitly provides them.
-
-## Scope
-
-In scope:
-
-- Vulnerabilities in issuecraft.
-- Insecure default configuration shipped by this project.
-- CI, release, or dependency guidance maintained by this project.
-
-Out of scope:
-
-- General support requests.
-- Requests for guaranteed maintenance timelines.
-- Issues in unrelated downstream projects.
-
-## Disclosure
-
-Coordinate disclosure with maintainers before publishing vulnerability details.
+Do not include real API keys, private keys, credentials, or customer data in fixtures or issues. Use fake values that exercise redaction behavior instead.
