@@ -1,0 +1,5 @@
+> npm test
+ok 1 loads config
+not ok 2 creates issue title
+  AssertionError: expected generated title to include failing command
+  at test/title.test.ts:12:5
