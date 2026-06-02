@@ -14,9 +14,13 @@ Usage:
 IssueCraft writes local Markdown drafts only. It never posts to GitHub.`;
 
 async function main(argv: string[]): Promise<number> {
+  if (argv.includes("--version") || argv.includes("-v")) {
+    console.log("0.1.0");
+    return 0;
+  }
   const parsed = parseArgs(argv);
   try {
-    if (!parsed.command || parsed.command === "help" || parsed.flags.has("help")) {
+    if (!parsed.command || parsed.command === "help" || parsed.command === "--help" || parsed.command === "-h" || parsed.flags.has("help")) {
       console.log(HELP);
       return 0;
     }
