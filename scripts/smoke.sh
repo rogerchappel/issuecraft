@@ -4,6 +4,8 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
+node "$ROOT/dist/cli.js" --help | grep -q 'IssueCraft'
+node "$ROOT/dist/cli.js" --version | grep -q '0.1.0'
 node "$ROOT/dist/cli.js" draft --log "$ROOT/test/fixtures/failing-test.log" --output "$TMP/issues"
 DRAFT="$(find "$TMP/issues" -name '*.md' | head -n 1)"
 test -s "$DRAFT"
