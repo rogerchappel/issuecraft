@@ -5,5 +5,6 @@
 - [Orchestration](ORCHESTRATION.md) — safe agent/human workflows.
 - [Orchestration manifest](orchestration.json) — machine-readable command boundaries.
 - [Safety model](SAFETY.md) — privacy and external-effect guarantees.
+- [Release candidate checklist](release-candidate.md) — verification evidence before a release PR.
 
 IssueCraft docs should preserve the central promise: local evidence becomes local drafts first, and publishing remains a reviewed human decision.
