@@ -39,5 +39,13 @@
   "devDependencies": {
     "@types/node": "^22.10.2",
     "typescript": "^5.7.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerchappel/issuecraft.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rogerchappel/issuecraft/issues"
+  },
+  "homepage": "https://github.com/rogerchappel/issuecraft#readme"
 }
