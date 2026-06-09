@@ -4,7 +4,7 @@
   "description": "Offline GitHub issue draft builder for turning local evidence into reviewable Markdown issues.",
   "type": "module",
   "bin": {
-    "issuecraft": "./dist/cli.js"
+    "issuecraft": "dist/cli.js"
   },
   "main": "./dist/index.js",
   "exports": {
@@ -13,7 +13,8 @@
   "files": [
     "dist",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "SECURITY.md"
   ],
   "scripts": {
     "build": "tsc",
