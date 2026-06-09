@@ -73,11 +73,11 @@ bash scripts/validate.sh
 - [Safety model](docs/SAFETY.md)
 - [Security policy](SECURITY.md)
 
-## Development
+## Release Readiness
 
 Use the same local checks that back release readiness:
 
-```bash
+```sh
 npm run check
 npm test
 npm run build
@@ -87,4 +87,3 @@ npm run release:check
 ```
 
 Run the narrower commands while iterating, then finish with the broadest available check before opening a PR.
-
