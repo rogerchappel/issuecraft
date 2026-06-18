@@ -89,3 +89,14 @@ npm run release:check
 ```
 
 Run the narrower commands while iterating, then finish with the broadest available check before opening a PR.
+
+## Release readiness
+
+Before opening a release PR, run the same checks that CI runs:
+
+```sh
+npm run release:check
+npm pack --dry-run
+```
+
+The package smoke keeps the published tarball contents visible before tagging or publishing.
