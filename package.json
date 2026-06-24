@@ -12,18 +12,21 @@
   },
   "files": [
     "dist",
+    "docs",
+    "examples",
     "README.md",
     "LICENSE",
     "SECURITY.md",
     "CHANGELOG.md",
-    "CONTRIBUTING.md"
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md"
   ],
   "scripts": {
     "build": "tsc",
     "check": "tsc --noEmit",
     "test": "npm run build && node --test dist/**/*.test.js",
     "smoke": "npm run build && bash scripts/smoke.sh",
-    "package:smoke": "npm pack --dry-run",
+    "package:smoke": "npm run build && test -f dist/cli.js && test -f dist/index.js && npm pack --dry-run",
     "release:check": "npm run check && npm test && npm run build && npm run smoke && npm run package:smoke"
   },
   "keywords": [
