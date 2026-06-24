@@ -89,5 +89,6 @@ npm run release:check
 ```
 
 Run the narrower commands while iterating, then finish with
-`npm run release:check` before opening a release PR. The package smoke keeps the
-published tarball contents visible before tagging or publishing.
+`npm run release:check` before opening a release PR. The package smoke rebuilds,
+asserts the CLI/runtime entrypoints exist, and keeps docs and examples visible in
+the tarball before tagging or publishing.
