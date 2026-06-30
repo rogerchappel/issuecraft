@@ -18,7 +18,16 @@ Or run directly from the checkout:
 node dist/cli.js help
 ```
 
-## Commands
+## Quickstart
+
+From a checkout, build once and run the CLI directly:
+
+```bash
+npm run build
+node dist/cli.js help
+```
+
+After installing or linking the package binary, draft local issue files with:
 
 ```bash
 issuecraft draft --log test-output.log --template bug --output issues/
