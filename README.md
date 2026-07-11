@@ -101,6 +101,16 @@ Run the narrower commands while iterating, then finish with
 `npm run release:check` before opening a release PR. The package smoke rebuilds,
 asserts the CLI/runtime entrypoints exist, and keeps docs and examples visible in
 the tarball before tagging or publishing.
+## CLI Help Smoke
+
+Confirm the packaged command starts and prints its help text before relying on a release tarball or downstream automation:
+
+```bash
+npm run build
+node dist/cli.js --help
+```
+
+The command should exit successfully, print the available options, and avoid reading project files or contacting external services.
 
 ## Limitations
 
